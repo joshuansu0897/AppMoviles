@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Login</string>
+
+    <string name="hint_user_name">Nombre de Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="hint_password_confirm">Confirmar contraseña</string>
+    <string name="text_button_signup">Crear cuenta</string>
+    <string name="text_button_signin">Iniciar Sesion</string>
+    <string name="hint_name_create">Nombre</string>
+    <string name="hint_user_name_create">Usuario</string>
+    <string name="tomar_foto">Tomar Foto</string>
+</resources>

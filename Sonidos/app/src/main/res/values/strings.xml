@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Cinema</string>
+
+    <string name="movie_prompt">Choose a movie</string>
+
+    <string-array name="movie_arrays">
+        <item>Macario</item>
+        <item>Office Space</item>
+        <item>Blood In, Blood Out</item>
+        <item>Ahí está el detalle</item>
+        <item>The Iron Giant</item>
+    </string-array>
+</resources>
