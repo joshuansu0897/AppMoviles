@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.vocales.Quiz">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:onClick="sonido" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/horizontal_card">
+
+                <Button
+                    android:id="@+id/a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vocal_a"
+                    android:tag="a"
+                    android:layout_weight="4"
+                    android:theme="@style/RaisedButtonDark" />
+
+                <Button
+                    android:id="@+id/e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vocal_e"
+                    android:tag="e"
+                    android:layout_weight="4"
+                    android:theme="@style/RaisedButtonDark" />
+
+                <Button
+                    android:id="@+id/i"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vocal_i"
+                    android:tag="i"
+                    android:layout_weight="4"
+                    android:theme="@style/RaisedButtonDark" />
+
+                <Button
+                    android:id="@+id/o"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vocal_o"
+                    android:tag="o"
+                    android:layout_weight="4"
+                    android:theme="@style/RaisedButtonDark" />
+
+                <Button
+                    android:id="@+id/u"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vocal_u"
+                    android:tag="u"
+                    android:layout_weight="4"
+                    android:theme="@style/RaisedButtonDark" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
