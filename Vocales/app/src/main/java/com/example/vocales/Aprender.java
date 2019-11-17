@@ -21,7 +21,7 @@ public class Aprender extends AppCompatActivity {
 
     private ArrayList<Vocal> vocales;
     private TextToSpeech textToSpeech;
-    private int position = 3;
+    private int position = 0;
     private Vocal vocal = null;
 
     @BindView(R.id.text_aprender)
@@ -35,17 +35,17 @@ public class Aprender extends AppCompatActivity {
 
     @OnClick(R.id.siguiente)
     void next() {
-        if (position >= vocales.size() + 3) {
+        if (position >= vocales.size() - 3) {
             return;
         }
 
-        setData();
         position += 3;
+        setData();
     }
 
     @OnClick(R.id.regresar)
     void back() {
-        if (position <= 5) {
+        if (position <= 0) {
             return;
         }
 
@@ -92,19 +92,19 @@ public class Aprender extends AppCompatActivity {
             }
         });
 
-        next();
+        setData();
     }
 
     private void setData() {
-        vocal = vocales.get(position - 3);
+        vocal = vocales.get(position);
         int id = getResources().getIdentifier(vocal.getImage(), "raw", getPackageName());
         img1.setImageResource(id);
 
-        vocal = vocales.get(position - 2);
+        vocal = vocales.get(position + 1);
         id = getResources().getIdentifier(vocal.getImage(), "raw", getPackageName());
         img2.setImageResource(id);
 
-        vocal = vocales.get(position - 1);
+        vocal = vocales.get(position + 2);
         id = getResources().getIdentifier(vocal.getImage(), "raw", getPackageName());
         img3.setImageResource(id);
 
@@ -132,23 +132,17 @@ public class Aprender extends AppCompatActivity {
     }
 
     public void sonido(View view) {
-        int pos = position - 3;
-
-        if (pos == 0) {
-            return;
-        }
-
         switch (view.getId()) {
             case R.id.img1:
-                vocal = vocales.get(pos - 3);
+                vocal = vocales.get(position);
                 habla(vocal.getSound());
                 break;
             case R.id.img2:
-                vocal = vocales.get(pos - 2);
+                vocal = vocales.get(position + 1);
                 habla(vocal.getSound());
                 break;
             case R.id.img3:
-                vocal = vocales.get(pos - 1);
+                vocal = vocales.get(position + 2);
                 habla(vocal.getSound());
                 break;
         }

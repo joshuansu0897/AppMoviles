@@ -18,6 +18,7 @@ public class Quiz extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_quiz);
 
         vocales = new ArrayList<>();
 
@@ -45,8 +46,6 @@ public class Quiz extends AppCompatActivity {
         vocales.add(new Vocal("universo", "universo", "u"));
         vocales.add(new Vocal("uno", "uno", "u"));
         vocales.add(new Vocal("uva", "uva", "u"));
-
-        setContentView(R.layout.activity_quiz);
     }
 
     void sonido(View view) {
