@@ -15,13 +15,33 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.6">
+            android:layout_weight="0.3">
 
-            <ImageView
+            <TextView
+                android:id="@+id/bien_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/correctas_0"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/mal_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bien_count"
+                android:layout_centerHorizontal="true"
+                android:text="@string/malas_0"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/imgQuiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mal_count"
                 android:layout_centerInParent="true"
                 android:clickable="true"
+                android:focusable="true"
                 android:onClick="sonido" />
 
         </RelativeLayout>
@@ -29,7 +49,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.4"
+            android:layout_weight="0.7"
             android:fillViewport="true">
 
             <LinearLayout
@@ -42,45 +62,45 @@
                     android:id="@+id/a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/vocal_a"
-                    android:tag="a"
                     android:layout_weight="4"
+                    android:onClick="response"
+                    android:text="@string/vocal_a"
                     android:theme="@style/RaisedButtonDark" />
 
                 <Button
                     android:id="@+id/e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/vocal_e"
-                    android:tag="e"
                     android:layout_weight="4"
+                    android:onClick="response"
+                    android:text="@string/vocal_e"
                     android:theme="@style/RaisedButtonDark" />
 
                 <Button
                     android:id="@+id/i"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/vocal_i"
-                    android:tag="i"
                     android:layout_weight="4"
+                    android:onClick="response"
+                    android:text="@string/vocal_i"
                     android:theme="@style/RaisedButtonDark" />
 
                 <Button
                     android:id="@+id/o"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/vocal_o"
-                    android:tag="o"
                     android:layout_weight="4"
+                    android:onClick="response"
+                    android:text="@string/vocal_o"
                     android:theme="@style/RaisedButtonDark" />
 
                 <Button
                     android:id="@+id/u"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/vocal_u"
-                    android:tag="u"
                     android:layout_weight="4"
+                    android:onClick="response"
+                    android:text="@string/vocal_u"
                     android:theme="@style/RaisedButtonDark" />
             </LinearLayout>
         </ScrollView>

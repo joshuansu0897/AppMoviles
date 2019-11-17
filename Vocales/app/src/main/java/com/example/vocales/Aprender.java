@@ -82,7 +82,7 @@ public class Aprender extends AppCompatActivity {
         vocales.add(new Vocal("oveja", "oveja", "o"));
 
         //u
-        vocales.add(new Vocal("universo", "universo", "u"));
+        vocales.add(new Vocal("ukelele", "ukelele", "u"));
         vocales.add(new Vocal("uno", "uno", "u"));
         vocales.add(new Vocal("uva", "uva", "u"));
 
@@ -146,5 +146,9 @@ public class Aprender extends AppCompatActivity {
                 habla(vocal.getSound());
                 break;
         }
+    }
+
+    public void onDestroy() {
+        super.onDestroy();
     }
 }

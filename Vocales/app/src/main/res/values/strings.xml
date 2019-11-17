@@ -9,4 +9,6 @@
     <string name="vocal_u">u</string>
     <string name="regresar">Regresar</string>
     <string name="siguiente">Siguiente</string>
+    <string name="correctas_0">correctas: 0</string>
+    <string name="malas_0">malas: 0</string>
 </resources>
