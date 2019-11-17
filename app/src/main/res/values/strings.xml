@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Vocales</string>
+    <string name="button_aprender">Aprender</string>
+    <string name="button_quiz">Quiz</string>
+    <string name="vocal_a">a</string>
+    <string name="vocal_e">e</string>
+    <string name="vocal_i">i</string>
+    <string name="vocal_o">o</string>
+    <string name="vocal_u">u</string>
+    <string name="regresar">Regresar</string>
+    <string name="siguiente">Siguiente</string>
+</resources>
