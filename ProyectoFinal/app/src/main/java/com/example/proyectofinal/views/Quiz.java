@@ -8,6 +8,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -188,6 +189,7 @@ public class Quiz extends AppCompatActivity {
     }
 
     public void sonido(View view) {
+        view.startAnimation(AnimationUtils.loadAnimation(view.getContext(), R.anim.animation));
         habla(vocal.getSound());
     }
 

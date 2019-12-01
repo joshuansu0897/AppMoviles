@@ -57,7 +57,7 @@ public class HighScore extends AppCompatActivity {
             @Override
             protected void onPostExecute(ArrayList<User> users) {
                 super.onPostExecute(users);
-                adapter.addToDos(users);
+                adapter.updateToDos(users);
             }
         }
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -133,6 +134,7 @@ public class Aprender extends AppCompatActivity {
     }
 
     public void sonido(View view) {
+        view.startAnimation(AnimationUtils.loadAnimation(view.getContext(), R.anim.animation));
         switch (view.getId()) {
             case R.id.img1:
                 vocal = vocales.get(position);

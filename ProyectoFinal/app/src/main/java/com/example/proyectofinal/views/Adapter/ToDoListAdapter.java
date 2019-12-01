@@ -3,6 +3,7 @@ package com.example.proyectofinal.views.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -84,8 +85,8 @@ public class ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ViewHo
         }
 
         @Override
-        public void onClick(View v) {
-
+        public void onClick(View view) {
+            view.startAnimation(AnimationUtils.loadAnimation(view.getContext(), R.anim.shake));
         }
     }
 }
